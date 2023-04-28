@@ -6,9 +6,10 @@ public class Observer : MonoBehaviour
 {
     public Transform player;
     public GameEnding gameEnding;
+
     bool m_IsPlayerInRange;
 
-   void OnTriggerEnter (Collider other)
+    void OnTriggerEnter (Collider other)
     {
         if (other.transform == player)
         {
@@ -16,7 +17,7 @@ public class Observer : MonoBehaviour
         }
     }
 
-     void OnTriggerExit (Collider other)
+    void OnTriggerExit (Collider other)
     {
         if (other.transform == player)
         {
@@ -38,7 +39,6 @@ public class Observer : MonoBehaviour
                 {
                     gameEnding.CaughtPlayer();
                 }
-                   
             }
         }
     }
